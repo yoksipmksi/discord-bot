@@ -1,0 +1,6 @@
+.env
+venv/
+__pycache__/
+bot3.py
+ctf_bot.log
+req2.txt
