@@ -1,6 +1,28 @@
+# --- RAHASIA / CREDENTIALS ---
+# Mengabaikan file konfigurasi asli yang berisi Token & API Key
 .env
-venv/
+*.env
+
+# --- PYTHON BUNDLES ---
+# Mengabaikan folder cache Python agar git tetap ringan
 __pycache__/
-bot3.py
-ctf_bot.log
-req2.txt
+*.py[cod]
+*$py.class
+
+# --- VIRTUAL ENVIRONMENT & LOCAL PACKAGES ---
+# Mengabaikan folder lokal tempat pip menginstal library di Wispbyte/Pterodactyl
+.local/
+.venv/
+venv/
+ENV/
+env/
+
+# --- LOGS / CATATAN SISTEM ---
+# Mengabaikan file log (jika kedepannya kamu pakai logger lagi)
+*.log
+logs/
+
+# --- OS / SYSTEM FILES ---
+# Mengabaikan file sampah otomatis dari Windows atau Mac
+.DS_Store
+Thumbs.db
