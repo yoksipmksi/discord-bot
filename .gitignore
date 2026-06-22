@@ -1,3 +1,5 @@
+instruksi.txt
+
 # --- RAHASIA / CREDENTIALS ---
 # Mengabaikan file konfigurasi asli yang berisi Token & API Key
 .env
