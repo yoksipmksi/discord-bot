@@ -84,9 +84,9 @@ jika berhasil, biasanya terminal akan menampilkan tanda seperti ini:
 install semua library berikut:
 
 ```bash
-pip install discord.py python-dotenv google-genai
+pip install -r requirements.txt
 ```
-
+pastikan virtual environment sudah aktif sebelum menjalankan perintah instalasi.
 library yang digunakan:
 
 ```text
