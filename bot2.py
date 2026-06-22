@@ -117,7 +117,7 @@ async def on_message(message):
 
                     # 1. Ambil 5 pesan terakhir di channel ini (termasuk pesan yang baru masuk)
                     konteks_pesan = []
-                    async for msg in message.channel.history(limit=5):
+                    async for msg in message.channel.history(limit=10):
                         # Format agar AI tahu siapa yang berbicara
                         konteks_pesan.append(f"{msg.author.name}: {msg.content}")
                     
