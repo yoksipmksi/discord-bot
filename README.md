@@ -482,7 +482,7 @@ python3 bot.py
 
 bot ini adalah bot discord berbasis python yang memanfaatkan gemini ai untuk membalas pesan secara otomatis ketika di-mention. bot menggunakan `.env` untuk menyimpan token dengan lebih aman, memiliki persona berbeda untuk user umum dan user khusus, serta memakai sistem fallback model agar tetap bisa menjawab ketika salah satu model terkena limit.
 
-
+##
 server-startup
 ```
 if [[ -d .git ]] && [[ "0" == "1" ]]; then git pull; fi; if [[ ! -z "" ]]; then pip install -U --prefix .local ; fi; if [[ -f /home/container/${REQUIREMENTS_FILE} ]]; then pip install -U --prefix .local -r ${REQUIREMENTS_FILE}; fi; /usr/local/bin/python /home/container/bot.py
