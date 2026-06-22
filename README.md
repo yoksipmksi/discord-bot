@@ -25,29 +25,22 @@ sebelum menjalankan bot, pastikan sudah menyiapkan:
 * koneksi internet
 * text editor seperti visual studio code
 
-## 1. download atau siapkan project
 
-buat folder project terlebih dahulu, misalnya:
+## 1. instalasi project dari github
+
+clone repository terlebih dahulu menggunakan perintah berikut:
 
 ```bash
-discord-bot
+git clone https://github.com/yoksipksi/discord-bot.git
 ```
 
-masuk ke folder tersebut:
+setelah proses clone selesai, masuk ke folder project:
 
 ```bash
 cd discord-bot
 ```
 
-lalu simpan file python bot, misalnya dengan nama:
-
-```text
-bot.py
-```
-
-## 2. buat virtual environment
-
-disarankan memakai virtual environment agar library project tidak bercampur dengan python utama.
+buat virtual environment agar library project tidak bercampur dengan python utama.
 
 ### windows
 
@@ -73,29 +66,22 @@ aktifkan virtual environment:
 source venv/bin/activate
 ```
 
-jika berhasil, biasanya terminal akan menampilkan tanda seperti ini:
-
-```text
-(venv)
-```
-
-## 3. install library yang dibutuhkan
-
-install semua library berikut:
+setelah virtual environment aktif, install semua library yang dibutuhkan melalui file `requirements.txt`:
 
 ```bash
 pip install -r requirements.txt
 ```
-pastikan virtual environment sudah aktif sebelum menjalankan perintah instalasi.
-library yang digunakan:
 
-```text
-discord.py      = untuk membuat bot discord
-python-dotenv   = untuk membaca file .env
-google-genai    = untuk menghubungkan python dengan gemini ai
+jika menggunakan linux atau macos dan perintah `pip` tidak berjalan, gunakan:
+
+```bash
+pip3 install -r requirements.txt
 ```
 
-## 4. membuat discord bot token
+setelah semua library berhasil terinstall, lanjutkan dengan membuat file `.env` dan mengisi token discord serta gemini api key.
+
+
+## 2. membuat discord bot token
 
 ikuti langkah berikut:
 
@@ -110,7 +96,7 @@ ikuti langkah berikut:
 
 jangan pernah membagikan token bot ke orang lain, karena token bisa digunakan untuk mengontrol bot kamu.
 
-## 5. aktifkan message content intent
+## 3. aktifkan message content intent
 
 agar bot bisa membaca isi pesan, aktifkan intent berikut:
 
@@ -128,7 +114,7 @@ intents.message_content = True
 
 tanpa mengaktifkan intent ini di developer portal, bot bisa online tetapi tidak bisa membaca isi pesan dengan benar.
 
-## 6. invite bot ke server discord
+## 4. invite bot ke server discord
 
 masuk ke menu `oauth2` lalu pilih `url generator`.
 
@@ -158,7 +144,7 @@ read message history
 
 setelah itu copy url yang muncul, buka di browser, lalu pilih server tempat bot akan dimasukkan.
 
-## 7. membuat gemini api key
+## 5. membuat gemini api key
 
 ikuti langkah berikut:
 
@@ -171,7 +157,7 @@ ikuti langkah berikut:
 
 jangan menyebarkan gemini api key ke publik, github, grup, atau discord.
 
-## 8. membuat file .env
+## 6. membuat file .env
 
 buat file baru di folder project dengan nama:
 
@@ -195,7 +181,7 @@ GEMINI_API_KEY=yyyyyyyyyyyyyyyyyyyyyyyy
 
 pastikan tidak ada spasi berlebihan sebelum atau sesudah tanda `=`.
 
-## 9. struktur folder project
+## 7. struktur folder project
 
 struktur folder yang disarankan:
 
@@ -216,7 +202,7 @@ jika memakai virtual environment, biasanya akan menjadi seperti ini:
   └── venv/
 ```
 
-## 10. menjalankan bot
+## 8. menjalankan bot
 
 jalankan bot dengan perintah:
 
@@ -238,7 +224,7 @@ Mantap! Bot udah online sebagai nama_bot
 
 setelah itu bot sudah online di discord.
 
-## 11. cara menggunakan bot
+## 9. cara menggunakan bot
 
 bot akan merespons jika di-mention di channel discord.
 
@@ -260,7 +246,7 @@ jika bot hanya di-mention tanpa pesan, bot akan menjawab:
 ehh iyaa? ada apa kak?
 ```
 
-## 12. cara kerja bot secara singkat
+## 10. cara kerja bot secara singkat
 
 alur kerja bot:
 
@@ -275,7 +261,7 @@ alur kerja bot:
 9. gemini ai mengirim jawaban
 10. bot membalas pesan user di discord
 
-## 13. mengatur user khusus / tuan
+## 11. mengatur user khusus / tuan
 
 di kode terdapat bagian:
 
@@ -308,7 +294,7 @@ contoh:
 TUAN_ID = zzzzzzzzzzzzzzzzzzz
 ```
 
-## 14. mengatur jumlah riwayat chat
+## 12. mengatur jumlah riwayat chat
 
 di kode terdapat bagian:
 
@@ -334,7 +320,7 @@ limit=10 cocok untuk bot percakapan biasa
 limit=20 cocok jika butuh konteks lebih panjang
 ```
 
-## 15. mengatur model gemini
+## 13. mengatur model gemini
 
 di kode terdapat daftar model:
 
@@ -365,7 +351,7 @@ daftar_model = [
 
 semakin banyak model fallback, semakin besar kemungkinan bot tetap menjawab ketika satu model limit. tetapi jika banyak model gagal, satu pesan user bisa memicu beberapa percobaan request.
 
-## 16. mengatur gaya balasan bot
+## 14. mengatur gaya balasan bot
 
 gaya balasan user umum diatur pada bagian:
 
@@ -389,7 +375,7 @@ system_instruction_umum = (
 )
 ```
 
-## 17. troubleshooting
+## 15. troubleshooting
 
 ### bot tidak online
 
@@ -468,7 +454,7 @@ intents.message_content = True
 
 di developer portal juga harus aktif.
 
-## 18. keamanan
+## 16. keamanan
 
 hal yang tidak boleh dilakukan:
 
@@ -479,7 +465,7 @@ hal yang tidak boleh dilakukan:
 * jangan menaruh token langsung di source code
 
 
-## 19. contoh file bot.py
+## 17. contoh file bot.py
 
 pastikan file utama bernama:
 
