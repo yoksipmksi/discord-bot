@@ -9,7 +9,7 @@ from google.genai.errors import APIError
 load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-TUAN_ID = 1068187631562784830 
+TUAN_ID = zzzzzzzzzzzzzzzzzzz
 
 ai_client = genai.Client(api_key=GEMINI_API_KEY)
 

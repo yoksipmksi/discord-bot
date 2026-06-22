@@ -200,22 +200,20 @@ pastikan tidak ada spasi berlebihan sebelum atau sesudah tanda `=`.
 struktur folder yang disarankan:
 
 ```text
-discord-bot/
-│
-├── bot.py
-├── .env
-└── README.md
+│ discord-bot/
+  ├── bot.py
+  ├── .env
+  └── README.md
 ```
 
 jika memakai virtual environment, biasanya akan menjadi seperti ini:
 
 ```text
-anya-discord-bot/
-│
-├── main.py
-├── .env
-├── README.md
-└── venv/
+│ discord-bot/
+  ├── main.py
+  ├── .env
+  ├── README.md
+  └── venv/
 ```
 
 ## 10. menjalankan bot
@@ -282,7 +280,7 @@ alur kerja bot:
 di kode terdapat bagian:
 
 ```python
-TUAN_ID = 1068187631562784830
+TUAN_ID = zzzzzzzzzzzzzzzzzzz
 ```
 
 angka tersebut adalah discord user id untuk user khusus.
@@ -307,7 +305,7 @@ TUAN_ID = id_user_baru
 contoh:
 
 ```python
-TUAN_ID = 123456789012345678
+TUAN_ID = zzzzzzzzzzzzzzzzzzz
 ```
 
 ## 14. mengatur jumlah riwayat chat
