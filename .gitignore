@@ -1,4 +1,7 @@
 instruksi.txt
+main.py
+main.next-update.py
+.vscode
 
 # --- RAHASIA / CREDENTIALS ---
 # Mengabaikan file konfigurasi asli yang berisi Token & API Key
